@@ -32,7 +32,7 @@ function CardInfo({ card }) {
     <article className={card.className}>
       <div className="card__title">{card.title}</div>
       <div className="card__paragraph">{card.paragraph}</div>
-      <img src={card.image} alt="search icon" class="card__image" />
+      <img src={card.image} alt="search icon" className="card__image" />
     </article>
   );
 }
