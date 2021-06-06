@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center"> 
-	🚀 Manipulação de Arrays e Components 🚀
+	🚀 Manipulação de Arrays e Components no ReactJS 🚀
 </h2>
 
 ## 💻 Sobre o projeto
@@ -14,7 +14,12 @@ Exercícios de Manipulação de Arrays e Components da [Cubos Academy](https://w
 1.  Testimonials
 2.  3-column
 
-O objetivo de ambos os exercícios é fazer uma "tradução" de sites com `html` e `css`, para uma aplicação `React`, criando componentes quando isso fizer sentido. Os arquivos `html` e `css` estão presentes na pasta "start" de cada exercício.
+O objetivo dos exercícios 1 e 2 é fazer uma "tradução" de sites com `html` e `css`, para uma aplicação `React`, criando componentes quando isso fizer sentido. Os arquivos `html` e `css` estão presentes na pasta "start" dentro de cada exercício.
+
+3. Job Listing
+4. Cards
+
+O objetivo dos exercícios 3 e 4 é criar um App React de acordo com o design encontrado no arquivo .fig na raiz do projeto. Lembre-se de **componentizar** sempre que se fizer sentido, afinal são exercícios de revisão de componentes React
 
 ## 💡 Pré-requisitos
  - O primeiro passo é instalar o [**Git**](https://git-scm.com) em seu computador caso você ainda não o tenha. 
@@ -47,7 +52,7 @@ $ yarn start
 http://localhost:3000
 ```
 ## 🛠 Tecnologias
-  - ![React](https://img.shields.io/badge/-React-4682b4)
+  - ![ReactJS](https://img.shields.io/badge/-ReactJS-4682b4)
 
 ## ✨ Extras
 ### Porque usar ReactJS?
