@@ -7,41 +7,39 @@ import software from './assets/software.svg';
 function App() {
   return (
     <>
-      <header>
-        <h1>Reliable, efficient delivery</h1>
+      <div className="header-content-wrapper">
+        <div className="header__main-title">Reliable, efficient delivery</div>
+        <div className="header__second-title">Powered by Technology</div>
+        <div className="header__paragraph">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</div>
+      </div>
 
-        <h2>Powered by Technology</h2>
-
-        <h4>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</h4>
-      </header>
-
-      <main>
+      <div className="main-container">
         <article className="card card--1">
           <div className="card__title">Supervisor</div>
           <div className="card__paragraph">Monitors activity to identify project roadblocks</div>
-          <div className="card__image">{search}</div>
+          <img src={search} alt="search icon" class="card__image" />
         </article>
 
-       <div className="middle-content-wrapper">
+        <div className="middle-container">
           <article className="card card--2">
             <div className="card__title">Team Builder</div>
             <div className="card__paragraph">Scans our talent network to create the optimal team for your project</div>
-            <div className="card__image">{homepage}</div>
+            <img src={homepage} alt="homepage icon" class="card__image" />
           </article>
 
           <article className="card card--3">
             <div className="card__title">Karma</div>
             <div className="card__paragraph">Regularly evaluates our talent to ensure quality</div>
-            <div className="card__image">{idea}</div>
+            <img src={idea} alt="light bulb icon" class="card__image" />
           </article>
         </div>
 
         <article className="card card--4">
           <div className="card__title">Calculator</div>
           <div className="card__paragraph">Uses data from past projects to provide better delivery estimates</div>
-          <div className="card__image">{software}</div>
+          <img src={software} alt="desktop icon" class="card__image" />
         </article>
-      </main>
+      </div>
     </>
   );
 }
