@@ -1,1 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+:root {
+  --color-greyish-blue: #5CA5A5;
+  --color-greyish-opac-blue: #5ca5a531;
+  --color-light-grey: #7C8F8F;
+  --color-dark-grey: #2B3939;
+  --color-white: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--color-greyish-blue);
+  display: flex;
+  margin-bottom: 4.75rem;
+  max-width: 100%;
+  position: relative;
+}
+
+.header__shape-right {
+  right: 0;
+  position: absolute;
+}
+
+.main-content-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  row-gap: 1.5rem;
+}
+
+.card {
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card__company-image {
+  margin-right: 1rem;
+}
+
+.card__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10rem;
+  row-gap: 0.6rem;
+}
+
+.info__company-name {
+  color: var(--color-greyish-blue);
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.info__new-job-alert {
+  background-color: var(--color-greyish-blue);
+  border-radius: 12px;
+  color: var(--color-white);
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.4rem 0.5rem 0.2rem 0.5rem;
+}
+
+.info__job-name {
+  color: var(--color-dark-grey);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.info__job-info {
+  color: var(--color-light-grey);
+  column-gap: 1rem;
+  display: flex;
+  font-weight: 500;
+}
+
+.card__tech-wrapper {
+  column-gap: 1rem;
+  display: flex;
+}
+
+.card__tech-name {
+  color: var(--color-greyish-blue);
+  background-color: var(--color-greyish-opac-blue);
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem 0.2rem 0.5rem;
+}
 
