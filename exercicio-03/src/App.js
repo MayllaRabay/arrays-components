@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import dot from './assets/dot.svg';
 import photosnap from './assets/photosnap.svg';
@@ -18,27 +19,34 @@ const jobs = [
 ];
 
 function JobCard({ job }) {
+  let [isActive, setIsActive] = useState(false);
+
+  function handleClick(){
+    setIsActive(!isActive);
+  }
+
   return (
-    <div className="card">
-          <img src={job.companyImage} alt="" className="card__company-image" />
-          <div className="card__info-wrapper">
-            <div>
-              <div className="info__company-name">{job.companyName}</div>
-              {job.newJob ? <div className="info__new-job-alert" >NEW!</div> : ""}
-            </div>
-            <div className="info__job-name">{job.jobName}</div>
-            <div className="info__job-info">
-              <div className="job__time">{job.jobTime}</div>
-              <img src={dot} alt="" />
-              <div className="job__contract">{job.jobContract}</div>
-              <img src={dot} alt="" />
-              <div className="job__location">{job.jobLocation}</div>
-            </div>
-          </div>
-          <div className="card__tech-wrapper">
-            {job.jobTechs.map( jobTech => <div className="card__tech-name">{jobTech}</div>)}
-          </div>
+    <div className={isActive ? "card card__active" : "card"}>
+      <img src={job.companyImage} alt="" className="card__company-image" />
+      <div className="card__info-wrapper">
+        <div>
+          <div className="info__company-name">{job.companyName}</div>
+          {job.newJob ? <div className="info__new-job-alert" >NEW!</div> : ""}
+          {isActive ? <div className="info__featured-job-alert">FEATURED</div> : ""}
         </div>
+        <div onClick={handleClick} className="info__job-name">{job.jobName}</div>
+        <div className="info__job-info">
+          <div className="job__time">{job.jobTime}</div>
+          <img src={dot} alt="" />
+          <div className="job__contract">{job.jobContract}</div>
+          <img src={dot} alt="" />
+          <div className="job__location">{job.jobLocation}</div>
+        </div>
+      </div>
+      <div className="card__tech-wrapper">
+        {job.jobTechs.map(jobTech => <div className="card__tech-name">{jobTech}</div>)}
+      </div>
+    </div>
   );
 }
 

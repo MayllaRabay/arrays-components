@@ -30,7 +30,7 @@
 
 .main-content-wrapper {
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   justify-items: center;
   row-gap: 1.5rem;
 }
@@ -44,8 +44,8 @@
   padding: 2rem 2.5rem;
 }
 
-.card:hover {
-  cursor: pointer;
+.card__active {
+  border-left: 5px solid var(--color-greyish-blue);
 }
 
 .card__company-image {
@@ -73,6 +73,16 @@
   color: var(--color-white);
   display: inline-block;
   font-weight: 700;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.5rem 0.2rem 0.5rem;
+}
+
+.info__featured-job-alert {
+  background-color: var(--color-dark-grey);
+  border-radius: 12px;
+  color: var(--color-white);
+  display: inline-block;
+  font-weight: 700;
   padding: 0.4rem 0.5rem 0.2rem 0.5rem;
 }
 
@@ -80,6 +90,11 @@
   color: var(--color-dark-grey);
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+.info__job-name:hover {
+  cursor: pointer;
+  color: var(--color-greyish-blue);
 }
 
 .info__job-info {
@@ -102,3 +117,8 @@
   padding: 0.4rem 0.5rem 0.2rem 0.5rem;
 }
 
+.card__tech-name:hover {
+  background-color: var(--color-greyish-blue);
+  cursor: pointer;
+  color: var(--color-white);
+}
