@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './App.css';
+import account from './assets/account.svg';
 import dot from './assets/dot.svg';
+import manage from './assets/manage.svg';
+import myhome from './assets/myhome.svg';
 import photosnap from './assets/photosnap.svg';
 import shapeLeft from './assets/shape-left.svg';
 import shapeRight from './assets/shape-right.svg';
@@ -15,7 +18,34 @@ const jobs = [
     jobContract: "Full Time",
     jobLocation: "USA only",
     jobTechs: ["Frontend", "Senior", "HTML", "CSS", "Javascript"]
-  }
+  }, {
+    companyImage: manage,
+    companyName: "Manage",
+    newJob: true,
+    jobName: "Fullstack Developer",
+    jobTime: "1d ago",
+    jobContract: "Part Time",
+    jobLocation: "Remote",
+    jobTechs: ["Fullstack", "Midweight", "Python", "React"]
+  }, {
+    companyImage: account,
+    companyName: "Account",
+    newJob: false,
+    jobName: "Junior Frontend Developer",
+    jobTime: "2d ago",
+    jobContract: "Part Time",
+    jobLocation: "USA only",
+    jobTechs: ["Frontend", "Junior", "React", "Sass", "Javascript"]
+  }, {
+    companyImage: myhome,
+    companyName: "MyHome",
+    newJob: false,
+    jobName: "Junior Frontend Developer",
+    jobTime: "5d ago",
+    jobContract: "Contract",
+    jobLocation: "USA only",
+    jobTechs: ["Frontend", "Junior", "CSS", "Javascript"]
+  },
 ];
 
 function JobCard({ job }) {
@@ -31,7 +61,7 @@ function JobCard({ job }) {
       <div className="card__info-wrapper">
         <div>
           <div className="info__company-name">{job.companyName}</div>
-          {job.newJob ? <div className="info__new-job-alert" >NEW!</div> : ""}
+          {job.newJob ? <div className="info__new-job-alert">NEW!</div> : ""}
           {isActive ? <div className="info__featured-job-alert">FEATURED</div> : ""}
         </div>
         <div onClick={handleClick} className="info__job-name">{job.jobName}</div>
@@ -44,7 +74,7 @@ function JobCard({ job }) {
         </div>
       </div>
       <div className="card__tech-wrapper">
-        {job.jobTechs.map(jobTech => <div className="card__tech-name">{jobTech}</div>)}
+        {job.jobTechs.map((jobTech, index) => <div key={index} className="card__tech-name">{jobTech}</div>)}
       </div>
     </div>
   );
@@ -59,7 +89,7 @@ function App() {
       </div>
 
       <div className="main-content-wrapper">
-        {jobs.map(job => <JobCard job = {job} />)}
+        {jobs.map((job, index) => <JobCard key={index} job={job} />)}
       </div>
     </>
   );
